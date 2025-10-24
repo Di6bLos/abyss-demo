@@ -25,8 +25,9 @@ captionList.forEach((caption) => {
 function openZoomOverlay(figure) {
 	const img = figure.querySelector("img");
 	const caption = figure.querySelector(".image-zoom__caption");
+	const largeImageSrc = img.getAttribute("data-large-image");
 	zoomOverlay.classList.add("open");
-	zoomImage.src = img.src;
+	zoomImage.src = largeImageSrc ? largeImageSrc : img.src;
 	captionText.innerHTML = caption.textContent;
 	body.classList.add("no-scroll");
 

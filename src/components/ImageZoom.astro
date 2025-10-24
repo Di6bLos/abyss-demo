@@ -5,16 +5,17 @@ interface Props {
 	src: string;
     alt: string;
     caption?: string;
+    largeImage?: string;
 }
 
-const { src = demoImage, alt = "", caption } = Astro.props; 
+const { src = demoImage, alt = "", caption, largeImage } = Astro.props; 
 ---
 
 <figure class="image-zoom">
 
     <div class="image-zoom__wrapper">
 
-        <img width="auto" height="auto" src={src} alt={alt} loading="lazy" />
+        <img width="auto" height="auto" src={src} alt={alt} data-large-image={largeImage} loading="lazy" />
 
         <button aria-label="Expand image." class="zoom-btn">
             <svg>
