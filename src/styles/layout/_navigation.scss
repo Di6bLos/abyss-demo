@@ -17,6 +17,9 @@
 .navbar {
     list-style: none;
     height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Mobile Menu Toggle Button */
