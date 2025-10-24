@@ -3,124 +3,77 @@ import Layout from "../layouts/Layout.astro";
 import Accordion from "../components/Accordion.astro";
 import Figure from "../components/Figure.astro";
 import List from "../components/List.astro";
+import ImageZoom from "../components/ImageZoom.astro";
 ---
 
-<Layout title="Home Page">
+<Layout title="Abyss - The Drowned One">
 
 	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h2>Welcome to the Astro Component Template</h2>
-				<p>This template provides a comprehensive collection of reusable UI components built with Astro, designed to help you create modern, accessible, and responsive web applications quickly and efficiently.</p>
-			</div>
-		</div>
 
-		<div class="row">
-			<div class="col">
-				<h3>🚀 Getting Started</h3>
-				<p>This template includes everything you need to start building with Astro. All components are pre-built, styled, and ready to use in your projects.</p>
+		<section class="lore-section">
+			<div class="story-section">
+				<h2>⚓ Before the Depths</h2>
 				
-				<Accordion header="Installation & Setup">
-					<ol>
-						<li><strong>Clone the repository:</strong> <code>git clone [repository-url]</code></li>
-						<li><strong>Install dependencies:</strong> <code>npm install</code></li>
-						<li><strong>Start development server:</strong> <code>npm run dev</code></li>
-						<li><strong>Build for production:</strong> <code>npm run build</code></li>
-					</ol>
-					<p>The development server will start at <code>http://localhost:4321</code></p>
-				</Accordion>
+				<ImageZoom
+					src="../src/assets/sebastian-cortez-portrait-cropped.jpg"
+					alt="Abyss emerging from the water, pale and glowing"
+					largeImage="../src/assets/sebastian-cortez-portrait.jpg"
+				></ImageZoom>
 
-				<Accordion header="Project Structure">
-					<pre><code>src/
-├── components/     # Reusable UI components
-├── layouts/        # Page layouts and navigation
-├── pages/          # Route pages and component demos
-├── scripts/        # JavaScript functionality
-└── styles/         # SCSS styling system</code></pre>
-					<p>Each component includes its own styling and JavaScript when needed, making them truly modular and reusable.</p>
-				</Accordion>
-
-				<Accordion header="Using Components">
-					<p>Import any component into your Astro pages:</p>
-					<pre><code>---
-import Accordion from "../components/Accordion.astro";
-import Figure from "../components/Figure.astro";
----
-
-&lt;Accordion header="Your Title"&gt;
-  &lt;p&gt;Your content here&lt;/p&gt;
-&lt;/Accordion&gt;</code></pre>
-					<p>Check the Components section in the navigation to see live demos and usage examples for each component.</p>
-				</Accordion>
-			</div>
-
-		</div>
-
-		<div class="row">
-			<div class="col">
-				<h3>📦 Available Components</h3>
-				<p>Explore our comprehensive component library:</p>
+				<p>Captain Sebastián Cortez was a man who believed the sea owed him everything. Born in Cádiz to a shipwright's family, he learned the language of tides before he learned to write his own name. By thirty, he commanded his own vessel — the <em>Peregrine</em> — and carved his legend across the Shattered Sea.</p>
 				
-				<List 
-					items={[
-						"Accordion - Collapsible content sections",
-						"Figure - Semantic images with captions",
-						"List - Styled list presentations", 
-						"Image Comparison - Before/after sliders",
-						"Image Hotspot - Interactive image annotations",
-						"Image Zoom - Click-to-zoom functionality",
-						"Timeline - Chronological event displays",
-						"Swiper - Image carousels and galleries"
-					]}
-				/>
-
-				<p><strong>Visit the <a href="/components/accordion">Components</a> section to see live demos and documentation for each component.</strong></p>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col">
-				<h3>🎨 Styling System</h3>
-				<p>The template uses a modular SCSS architecture with:</p>
-				<ul>
-					<li><strong>CSS Variables:</strong> Easily customizable color schemes and spacing</li>
-					<li><strong>Component-based styles:</strong> Each component has its own stylesheet</li>
-					<li><strong>Responsive design:</strong> Mobile-first approach with flexible layouts</li>
-					<li><strong>Accessibility:</strong> WCAG compliant markup and interactions</li>
-				</ul>
-			</div>
-			<div class="col">
-				<h3>⚡ Key Features</h3>
-				<ul>
-					<li><strong>Zero JavaScript by default:</strong> Static-first with optional interactivity</li>
-					<li><strong>TypeScript support:</strong> Type-safe component development</li>
-					<li><strong>SEO optimized:</strong> Semantic HTML and meta tag support</li>
-					<li><strong>Performance focused:</strong> Optimized images and minimal bundle size</li>
-					<li><strong>Developer friendly:</strong> Hot reload and clear documentation</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col">
-				<h3>🛠️ Customization</h3>
-				<p>All components are designed to be easily customizable:</p>
-				<ul>
-					<li><strong>CSS Variables:</strong> Modify colors, spacing, and typography globally</li>
-					<li><strong>Component Props:</strong> Pass custom data and configuration</li>
-					<li><strong>SCSS Mixins:</strong> Extend styles with consistent patterns</li>
-					<li><strong>Responsive Utilities:</strong> Built-in breakpoint and layout helpers</li>
-				</ul>
+				<p>Cortez was a pirate of precision, not chaos. He studied the ocean like scripture, charting hidden currents and unclaimed routes that made him both feared and envied. To him, the sea was not a mystery — it was a challenge. Something to master.</p>
 				
-				<p><strong>Next Steps:</strong></p>
-				<ol>
-					<li>Explore the component demos in the navigation menu</li>
-					<li>Copy the usage examples for components you need</li>
-					<li>Customize the styling to match your brand</li>
-					<li>Build your pages using the provided components</li>
-				</ol>
+				<p>When whispers spread of a region beyond the edge of any map — a vast, windless expanse known only as the Maw — Cortez saw it not as danger, but destiny. He believed that whatever lay at the center of the world's waters would grant him dominion over them.</p>
 			</div>
-		</div>
+
+			<div class="story-section">
+				<h2>🌊 The Fall</h2>
+				<!-- Add image: Storm at sea, crew in distress -->
+				<p>The voyage into the Maw lasted forty-one days. The stars vanished. The compasses spun. The water grew still. By the forty-second, half the crew had gone mad — hearing voices in the tide, seeing shapes beneath the hull. The Peregrine's decks wept saltwater, and Cortez's pride turned to fear.</p>
+				
+				<p>When the storm came, it rose not from the sky but from below. His crew mutinied, blaming him for their doom, and cast him overboard in chains. As he sank, Cortez felt his lungs burn, his heart pound — and then something vast pressed against his mind.</p>
+				
+				<p><strong>It didn't speak. It breathed through him.</strong></p>
+			</div>
+
+			<div class="story-section">
+				<h2>⚡ The Rebirth</h2>
+				<!-- Add image: Abyss emerging from the water, pale and glowing -->
+				<p>Days later, the <em>Peregrine</em> was found adrift — crewless, its timbers groaning like a living thing. At its helm stood a figure pale as moonlight, water dripping endlessly from his coat. His eyes glowed faint blue, his voice low and steady as the tide.</p>
+				
+				<p>He no longer answered to Sebastián Cortez. He was the ocean's will given flesh — the herald of the deep. He was <strong>Abyss</strong>.</p>
+
+				
+			</div>
+
+			<div class="story-section">
+				<h2>🚢 The Gravewake</h2>
+				<!-- Add image: The cursed ship with ghostly crew -->
+				<p>Once known as the <em>Peregrine</em>, the ship was reborn alongside its captain. Its sails drip with endless water, its hull groans like a beast of burden, and ghostly silhouettes move upon its decks. The Gravewake sails without wind or current, appearing where storms brew or souls are claimed by the deep.</p>
+				
+				<p>Legends say it carries the lost — crewmen and sailors who died at sea — bound in endless servitude to the Abyss. The ship's lantern burns with drowned starlight, illuminating no path, only the next victim.</p>
+			</div>
+
+			<div class="story-section">
+				<h2>⚔️ Tidebreaker</h2>
+				<!-- Add image: The mystical sword with blue glow -->
+				<p>Tidebreaker, once a gilded cutlass of Cortez's pride, now hums with the power of the deep. Its blade is forged from drowned steel, half-solid, half-liquid, rippling with a faint blue glow. When swung, it carries the force of the tide — striking like a crashing wave.</p>
+				
+				<p>Each strike of Tidebreaker pulls the moisture from the air, the sea, even its foes. When it meets another blade, the sound is not of metal, but of distant thunder. Only Abyss can wield it, for in mortal hands it turns to water and slips away.</p>
+				
+				<p><strong>It is said that when Tidebreaker meets its mark, the victim does not bleed — they drown.</strong></p>
+			</div>
+		</section>
+
+		<section class="current-legend">
+			<h2>🌊 The Current Legend</h2>
+			<div class="quote-section">
+				<blockquote>
+					<p>Sailors say the Gravewake moves with no wind, drawn only by hunger. They say her captain no longer breathes, and that when his ship appears on the horizon, the sea grows perfectly still — as though waiting to see which souls will join it below.</p>
+				</blockquote>
+			</div>
+		</section>
 	</div>
 
 </Layout>

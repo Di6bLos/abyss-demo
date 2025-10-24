@@ -1,9 +1,14 @@
 @use 'sass:math';
 
 // Colors
-$color-primary:       #1F2C3E;
-$color-secondary:     #4B9AA8;
-$color-tertiary:      #CA5F3C;
+$color-midnight-green:    #155065ff;
+$color-caribbean-current: #1B5C57ff;
+$color-turquoise:         #64E5D1ff;
+$color-sage:              #D5D1A6ff;
+
+$color-primary:       $color-midnight-green;
+$color-secondary:     $color-caribbean-current;
+$color-tertiary:      $color-sage;
 
 // Baseline Colors
 $color-warning-red:   #DD4448;
