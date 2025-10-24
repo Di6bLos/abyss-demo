@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from '../components/ThemeToggle.astro';
+
 const currentPage = Astro.url.pathname;
 ---
 
@@ -13,7 +15,7 @@ const currentPage = Astro.url.pathname;
         </button>
 
         <a class="logo" href="/">
-					<img src="https://placehold.co/1440x1080" alt="PROJECTUPDATE"/> <!-- PROJECTUPDATE src, alt-->
+					<img src="../src/assets/abyss-logo.png" alt="PROJECTUPDATE"/> <!-- PROJECTUPDATE src, alt-->
 				</a>
 
         <div class="navbar__nav">
@@ -23,14 +25,12 @@ const currentPage = Astro.url.pathname;
                 </li>
 
                 <li class="nav-item">
-                    <a class={currentPage === '/' ? 'current-page nav-link' : 'nav-link'} href="/abilities">Abilities</a>
+                    <a class={currentPage === '/abilities' ? 'current-page nav-link' : 'nav-link'} href="/abilities">Abilities</a>
                 </li>
             </ul> <!-- .navbar__nav-menu -->
         </div>
 
-        <button class="btn theme-toggle">
-            toggle theme
-        </button>
+        <ThemeToggle />
 
     </div> <!-- .navbar -->
 </div> <!-- .container-fluid -->
