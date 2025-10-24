@@ -1,0 +1,117 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SwiperComponent from "../../components/Swiper.astro";
+---
+
+<Layout title="Swiper">
+	<div class="container">
+		<section class="section">
+			<p>The Swiper component creates beautiful image carousels with smooth transitions and responsive navigation. Perfect for showcasing portfolios, product galleries, testimonials, or any visual content that needs interactive browsing.</p>
+			
+			<h2>Demo</h2>
+			<div class="component-demo">
+				<h3>Product Showcase</h3>
+				<SwiperComponent
+					slides={[
+						{ 
+							src: "https://placehold.co/800x500/3b82f6/ffffff?text=Product+1", 
+							alt: "Product 1", 
+							caption: "Premium Product Line - High quality materials with modern design aesthetics" 
+						},
+						{ 
+							src: "https://placehold.co/800x500/10b981/ffffff?text=Product+2", 
+							alt: "Product 2", 
+							caption: "Eco-Friendly Collection - Sustainable materials for environmentally conscious consumers" 
+						},
+						{ 
+							src: "https://placehold.co/800x500/f59e0b/ffffff?text=Product+3", 
+							alt: "Product 3", 
+							caption: "Limited Edition Series - Exclusive designs with premium features and finishing" 
+						},
+						{ 
+							src: "https://placehold.co/800x500/ef4444/ffffff?text=Product+4", 
+							alt: "Product 4", 
+							caption: "Classic Collection - Timeless designs that never go out of style" 
+						}
+					]}
+				/>
+
+				<h3>Image Gallery</h3>
+				<SwiperComponent
+					slides={[
+						{ 
+							src: "https://placehold.co/800x500/8b5cf6/ffffff?text=Gallery+1", 
+							alt: "Gallery Image 1", 
+							caption: "Beautiful landscape photography capturing nature's finest moments" 
+						},
+						{ 
+							src: "https://placehold.co/800x500/06b6d4/ffffff?text=Gallery+2", 
+							alt: "Gallery Image 2", 
+							caption: "Urban architecture showcasing modern design and innovation" 
+						},
+						{ 
+							src: "https://placehold.co/800x500/84cc16/ffffff?text=Gallery+3", 
+							alt: "Gallery Image 3", 
+							caption: "Portrait photography highlighting human emotion and connection" 
+						}
+					]}
+				/>
+			</div>
+
+			<h3>Features</h3>
+			<ul>
+				<li>Smooth slide transitions and animations</li>
+				<li>Touch-friendly swipe gestures for mobile</li>
+				<li>Navigation arrows and pagination dots</li>
+				<li>Keyboard navigation support</li>
+				<li>Responsive design for all screen sizes</li>
+				<li>Customizable slide content with captions</li>
+				<li>Accessibility features for screen readers</li>
+				<li>Auto-play functionality (optional)</li>
+			</ul>
+
+			<h3>Usage Example</h3>
+			<pre><code>&lt;SwiperComponent
+  slides={[
+    { 
+      src: "path/to/image1.jpg", 
+      alt: "Image 1 description", 
+      caption: "Caption for first slide" 
+    },
+    { 
+      src: "path/to/image2.jpg", 
+      alt: "Image 2 description", 
+      caption: "Caption for second slide" 
+    }
+  ]}
+/&gt;</code></pre>
+
+			<h3>Slide Data Structure</h3>
+			<p>Each slide should have the following structure:</p>
+			<ul>
+				<li><strong>src</strong>: URL or path to the image</li>
+				<li><strong>alt</strong>: Alternative text for accessibility</li>
+				<li><strong>caption</strong>: Descriptive caption displayed below the image</li>
+			</ul>
+
+			<h3>Use Cases</h3>
+			<ul>
+				<li>Product galleries and showcases</li>
+				<li>Portfolio presentations</li>
+				<li>Testimonial carousels</li>
+				<li>Image galleries and photo albums</li>
+				<li>Feature highlights and announcements</li>
+				<li>Before/after showcases</li>
+			</ul>
+
+			<h3>Interaction</h3>
+			<p>Users can navigate through slides using:</p>
+			<ul>
+				<li>Navigation arrows (previous/next buttons)</li>
+				<li>Pagination dots for direct slide access</li>
+				<li>Touch gestures on mobile devices</li>
+				<li>Keyboard arrow keys for accessibility</li>
+			</ul>
+		</section>
+	</div>
+</Layout>

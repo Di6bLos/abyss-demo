@@ -1,0 +1,77 @@
+---
+interface HotSpot {
+    id: string;
+    x: number; // Percentage from left (0-100)
+    y: number; // Percentage from top (0-100)
+    title: string;
+    description?: string; // Can contain HTML content including links
+    link?: string;
+    icon?: string; // Optional icon class or emoji
+}
+
+interface Props {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+    hotspots: HotSpot[];
+    className?: string;
+}
+
+const { 
+    src, 
+    alt, 
+    width, 
+    height, 
+    hotspots = [],
+    className = ""
+} = Astro.props;
+
+// Generate unique ID
+const componentId = `hotspot-map-${Date.now()}`;
+---
+
+<div class={`image-hotspot ${className}`} id={componentId}>
+        <img 
+            src={src} 
+            alt={alt} 
+            width={width}
+            height={height}
+            class="image-hotspot__image"
+        />
+        
+        {hotspots.map((hotspot) => (
+            <div 
+                class="hotspot" 
+                tabindex="0"
+                style={`left: ${hotspot.x}%; top: ${hotspot.y}%;`}
+                data-hotspot-id={hotspot.id}
+            >
+                <button 
+                    class="hotspot__marker"
+                    tabindex="-1"
+                >
+                    <span class="hotspot__icon">
+                        {hotspot.icon ? hotspot.icon : '📍'}
+                    </span>
+                </button>
+                
+                <div class="hotspot__tooltip" role="tooltip">
+                    <div class="hotspot__tooltip-content">
+
+                        <h4 class="hotspot__title">{hotspot.title}</h4>
+
+                        {hotspot.description && (
+                            <p class="hotspot__description" set:html={hotspot.description}></p>
+                        )}
+
+                    </div>
+
+                    <div class="hotspot__tooltip-arrow"></div>
+
+                </div>
+            </div>
+        ))}
+</div>
+
+<script src="../scripts/image-hotspot.js"></script>

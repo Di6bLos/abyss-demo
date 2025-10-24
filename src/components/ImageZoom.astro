@@ -1,0 +1,36 @@
+---
+const demoImage = "https://placehold.co/600x400?text=Add+Image+Source";
+
+interface Props {
+	src: string;
+    alt: string;
+    caption?: string;
+}
+
+const { src = demoImage, alt = "", caption } = Astro.props; 
+---
+
+<figure class="image-zoom">
+
+    <div class="image-zoom__wrapper">
+
+        <img width="auto" height="auto" src={src} alt={alt} loading="lazy" />
+
+        <button aria-label="Expand image." class="zoom-btn">
+            <svg>
+                <use href="/icons.svg#expand-icon"></use>
+            </svg>
+        </button>	
+
+    </div> <!-- .image-zoom__wrapper-->
+
+    {/* Conditional render caption if provided */}
+    {caption && (
+        <figcaption>
+            <span class="image-zoom__caption">{caption}</span>
+        </figcaption>
+    )}
+
+</figure> <!-- .image-zoom -->
+
+<script src="../scripts/image-zoom.js"></script>

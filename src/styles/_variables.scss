@@ -1,0 +1,87 @@
+@use 'sass:math';
+
+// Colors
+$color-primary:       #1F2C3E;
+$color-secondary:     #4B9AA8;
+$color-tertiary:      #CA5F3C;
+
+// Baseline Colors
+$color-warning-red:   #DD4448;
+$color-transparent:   rgba(0, 0, 0, 0);
+$color-overlay:       linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+$color-overlay-dark:  linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%);
+$color-white:         #FFF;
+$color-black:         #000;
+$color-gray-light:    #F0F0F0;
+$color-gray:          #AAAAAA;
+$color-gray-dark:     #5A5A5A;
+$color-charcoal:      #333333;
+
+// Typography
+$font-family-primary:   'Roboto', sans-serif;
+$font-family-secondary: 'Montserrat', sans-serif;
+
+// Convert pixel values to rem.
+$root-font-size: 16px; // Default root font size, typically 16px in browsers
+
+// Function to strip units from a value
+@function stripUnit($value) {
+	@return math.div($value, ($value * 0 + 1));
+}
+// Function to convert pixel values to rem
+@function rem($pxValue) {
+	$remValue: math.div(stripUnit($pxValue), stripUnit($root-font-size)) + rem;	
+    @return $remValue;
+}
+
+// Font Sizes
+$font-size-xxlarge: rem(32px);
+$font-size-xlarge:  rem(24px);
+$font-size-large:   rem(20px);
+$font-size-medium:  rem(18px);
+$font-size-small:   rem(16px);
+$font-size-xsmall:  rem(14px);
+
+// Breakpoints 
+$bp-xxlarge:       1600px;
+$bp-xlarge:        1440px;
+$bp-large:         1150px;
+$bp-medium:        782px;
+$bp-small:         600px;
+$bp-xsmall:        400px;
+
+// Spacing
+$spacing-large:    60px;
+$spacing-medium:   40px;
+$spacing-small:    20px;
+$spacing-xsmall:   10px;
+
+// Animations
+$transition: 0.2s ease-in-out;
+
+// Miscellaneous
+$box-shadow: 0px 8px 8px -8px rgba(0,0,0,0.2);
+
+// Mixins
+@mixin button-styles($text-color, $background-color, $hover-color ) {
+    color: $text-color;
+    background-color: $background-color;
+    border-color: $background-color;
+	transition: $transition;
+
+    &:hover {
+        background-color: $hover-color;
+		border-color: $hover-color;
+        color: $text-color;
+    	text-decoration: none;
+    }
+
+    &:visited {
+        color: $text-color;
+    }
+
+	&:active,
+	&:focus {
+		outline: dotted 1px $background-color;
+	}
+}

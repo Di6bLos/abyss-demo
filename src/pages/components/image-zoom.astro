@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ImageZoomComponent from "../../components/imageZoom.astro";
+---
+
+<Layout title="Image Zoom Component">
+	<div class="container">
+		<section class="section">
+			<p>The Image Zoom component provides an interactive way to display images with zoom functionality. Users can click to view images in a larger overlay, perfect for product galleries, portfolios, or any scenario where detailed image viewing is important.</p>
+			
+			<h2>Demo</h2>
+			<div class="component-demo">
+				<h3>Product Image with Zoom</h3>
+				<ImageZoomComponent
+					src="https://placehold.co/600x400/3b82f6/ffffff?text=Product+Image"
+					alt="Product demonstration image"
+					caption="Click the expand icon to view this product image in full detail"
+				/>
+			</div>
+
+			<h3>Features</h3>
+			<ul>
+				<li>Click-to-zoom functionality with overlay</li>
+				<li>Smooth zoom animations and transitions</li>
+				<li>Full-screen image viewing experience</li>
+				<li>Optional captions for context</li>
+				<li>Responsive design for all screen sizes</li>
+				<li>Touch-friendly for mobile devices</li>
+				<li>Accessibility features with proper ARIA labels</li>
+				<li>Background overlay for focus</li>
+			</ul>
+
+			<h3>Usage Example</h3>
+			<pre><code>&lt;ImageZoomComponent
+  src="path/to/your/image.jpg"
+  alt="Descriptive alt text"
+  caption="Optional caption for context"
+/&gt;</code></pre>
+
+			<h3>Props</h3>
+			<ul>
+				<li><strong>src</strong>: URL or path to the image (required)</li>
+				<li><strong>alt</strong>: Alternative text for accessibility (required)</li>
+				<li><strong>caption</strong>: Optional caption displayed below the image</li>
+			</ul>
+
+			<h3>Use Cases</h3>
+			<ul>
+				<li>Product galleries and e-commerce sites</li>
+				<li>Portfolio and artwork showcases</li>
+				<li>Technical documentation with diagrams</li>
+				<li>Photo galleries and image collections</li>
+				<li>Before/after comparison images</li>
+				<li>Detailed infographics and charts</li>
+				<li>Real estate property photos</li>
+			</ul>
+
+			<h3>Interaction</h3>
+			<p>Users can interact with the zoom component in several ways:</p>
+			<ul>
+				<li><strong>Click the expand icon</strong> to open the full-size overlay</li>
+				<li><strong>Click outside the image</strong> in the overlay to close</li>
+				<li><strong>Press ESC key</strong> to close the overlay</li>
+				<li><strong>Touch gestures</strong> on mobile devices for opening/closing</li>
+			</ul>
+
+			<h3>Accessibility</h3>
+			<p>The Image Zoom component follows accessibility best practices:</p>
+			<ul>
+				<li>Semantic HTML with proper figure and figcaption elements</li>
+				<li>Descriptive ARIA labels for the zoom button</li>
+				<li>Keyboard navigation support</li>
+				<li>Focus management when overlay opens/closes</li>
+				<li>Screen reader compatible</li>
+			</ul>
+		</section>
+	</div>
+</Layout>

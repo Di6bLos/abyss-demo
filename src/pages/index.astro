@@ -1,0 +1,126 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Accordion from "../components/Accordion.astro";
+import Figure from "../components/Figure.astro";
+import List from "../components/List.astro";
+---
+
+<Layout title="Home Page">
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h2>Welcome to the Astro Component Template</h2>
+				<p>This template provides a comprehensive collection of reusable UI components built with Astro, designed to help you create modern, accessible, and responsive web applications quickly and efficiently.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<h3>🚀 Getting Started</h3>
+				<p>This template includes everything you need to start building with Astro. All components are pre-built, styled, and ready to use in your projects.</p>
+				
+				<Accordion header="Installation & Setup">
+					<ol>
+						<li><strong>Clone the repository:</strong> <code>git clone [repository-url]</code></li>
+						<li><strong>Install dependencies:</strong> <code>npm install</code></li>
+						<li><strong>Start development server:</strong> <code>npm run dev</code></li>
+						<li><strong>Build for production:</strong> <code>npm run build</code></li>
+					</ol>
+					<p>The development server will start at <code>http://localhost:4321</code></p>
+				</Accordion>
+
+				<Accordion header="Project Structure">
+					<pre><code>src/
+├── components/     # Reusable UI components
+├── layouts/        # Page layouts and navigation
+├── pages/          # Route pages and component demos
+├── scripts/        # JavaScript functionality
+└── styles/         # SCSS styling system</code></pre>
+					<p>Each component includes its own styling and JavaScript when needed, making them truly modular and reusable.</p>
+				</Accordion>
+
+				<Accordion header="Using Components">
+					<p>Import any component into your Astro pages:</p>
+					<pre><code>---
+import Accordion from "../components/Accordion.astro";
+import Figure from "../components/Figure.astro";
+---
+
+&lt;Accordion header="Your Title"&gt;
+  &lt;p&gt;Your content here&lt;/p&gt;
+&lt;/Accordion&gt;</code></pre>
+					<p>Check the Components section in the navigation to see live demos and usage examples for each component.</p>
+				</Accordion>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<h3>📦 Available Components</h3>
+				<p>Explore our comprehensive component library:</p>
+				
+				<List 
+					items={[
+						"Accordion - Collapsible content sections",
+						"Figure - Semantic images with captions",
+						"List - Styled list presentations", 
+						"Image Comparison - Before/after sliders",
+						"Image Hotspot - Interactive image annotations",
+						"Image Zoom - Click-to-zoom functionality",
+						"Timeline - Chronological event displays",
+						"Swiper - Image carousels and galleries"
+					]}
+				/>
+
+				<p><strong>Visit the <a href="/components/accordion">Components</a> section to see live demos and documentation for each component.</strong></p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<h3>🎨 Styling System</h3>
+				<p>The template uses a modular SCSS architecture with:</p>
+				<ul>
+					<li><strong>CSS Variables:</strong> Easily customizable color schemes and spacing</li>
+					<li><strong>Component-based styles:</strong> Each component has its own stylesheet</li>
+					<li><strong>Responsive design:</strong> Mobile-first approach with flexible layouts</li>
+					<li><strong>Accessibility:</strong> WCAG compliant markup and interactions</li>
+				</ul>
+			</div>
+			<div class="col">
+				<h3>⚡ Key Features</h3>
+				<ul>
+					<li><strong>Zero JavaScript by default:</strong> Static-first with optional interactivity</li>
+					<li><strong>TypeScript support:</strong> Type-safe component development</li>
+					<li><strong>SEO optimized:</strong> Semantic HTML and meta tag support</li>
+					<li><strong>Performance focused:</strong> Optimized images and minimal bundle size</li>
+					<li><strong>Developer friendly:</strong> Hot reload and clear documentation</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<h3>🛠️ Customization</h3>
+				<p>All components are designed to be easily customizable:</p>
+				<ul>
+					<li><strong>CSS Variables:</strong> Modify colors, spacing, and typography globally</li>
+					<li><strong>Component Props:</strong> Pass custom data and configuration</li>
+					<li><strong>SCSS Mixins:</strong> Extend styles with consistent patterns</li>
+					<li><strong>Responsive Utilities:</strong> Built-in breakpoint and layout helpers</li>
+				</ul>
+				
+				<p><strong>Next Steps:</strong></p>
+				<ol>
+					<li>Explore the component demos in the navigation menu</li>
+					<li>Copy the usage examples for components you need</li>
+					<li>Customize the styling to match your brand</li>
+					<li>Build your pages using the provided components</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+</Layout>

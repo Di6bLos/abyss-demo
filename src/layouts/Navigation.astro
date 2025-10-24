@@ -1,0 +1,49 @@
+---
+const currentPage = Astro.url.pathname;
+---
+
+<div class="sticky-top">
+    <div class="container navbar">
+        <button 
+            class="navbar__toggle" 
+            type="button" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+            <span class="navbar__toggle__icon"></span>
+        </button>
+
+        <div class="navbar__nav">
+            <ul class="navbar__nav-menu">
+                <li class="nav-item">
+                    <a class={currentPage === '/' ? 'current-page nav-link' : 'nav-link'} href="/" data-target="section-one">Homepage</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="dropdown-btn" data-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link">
+                            Components 
+                            <span class="dropdown-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><g><g><path fill="#000000" d="M10.59.59L6.706 4.465a1 1 0 0 1-1.412 0L1.41.59 0 2l5.293 5.293a1 1 0 0 0 1.414 0L12 2z"/></g></g></svg>
+                            </span>
+                        </a>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <div class="dropdown-menu__inner">
+                            <li class="nav-item"><a class={currentPage === '/components/accordion' ? 'current-page nav-link' : 'nav-link'} href="/components/accordion">Accordion</a></li>
+                            <li class="nav-item"><a class={currentPage === '/components/figure' ? 'current-page nav-link' : 'nav-link'} href="/components/figure">Figure</a></li>
+                            <li class="nav-item"><a class={currentPage === '/components/list' ? 'current-page nav-link' : 'nav-link'} href="/components/list">List</a></li>
+                            <li class="nav-item"><a class={currentPage === '/components/image-comparison' ? 'current-page nav-link' : 'nav-link'} href="/components/image-comparison">Image Comparison</a></li>
+                            <li class="nav-item"><a class={currentPage === '/components/image-hotspot' ? 'current-page nav-link' : 'nav-link'} href="/components/image-hotspot">Image Hotspot</a></li>
+                            <li class="nav-item"><a class={currentPage === '/components/image-zoom' ? 'current-page nav-link' : 'nav-link'} href="/components/image-zoom">Image Zoom</a></li>
+                            <li class="nav-item"><a class={currentPage === '/components/timeline' ? 'current-page nav-link' : 'nav-link'} href="/components/timeline">Timeline</a></li>
+                            <li class="nav-item"><a class={currentPage === '/components/swiper' ? 'current-page nav-link' : 'nav-link'} href="/components/swiper">Swiper</a></li>
+                        </div>
+                    </ul> <!-- .dropdown-menu -->
+                </li>
+            </ul> <!-- .navbar__nav-menu -->
+        </div>
+
+    </div> <!-- .navbar -->
+</div> <!-- .container-fluid -->
+
+
+<script src="../scripts/navigation.js"></script>

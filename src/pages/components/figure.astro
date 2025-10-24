@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import FigureComponent from "../../components/Figure.astro";
+---
+
+<Layout title="Figure">
+	<div class="container">
+		<section class="section">
+			<p>The Figure component provides a semantic way to display images with captions. It ensures proper accessibility and responsive behavior while maintaining clean, semantic HTML structure.</p>
+			
+			<h2>Demo</h2>
+			<div class="component-demo">
+				<FigureComponent
+					src="https://placehold.co/600x400/3b82f6/ffffff?text=Standard+Figure"
+					alt="Example of a standard figure"
+					caption="This is a standard figure with a descriptive caption that explains the content of the image."
+				/>
+
+				<FigureComponent
+					src="https://placehold.co/800x300/10b981/ffffff?text=Wide+Landscape"
+					alt="Wide landscape image example"
+					caption="Wide landscape images are perfect for showcasing panoramic views or wide content areas."
+				/>
+
+				<FigureComponent
+					src="https://placehold.co/400x600/f59e0b/ffffff?text=Portrait+Format"
+					alt="Portrait format image example"
+					caption="Portrait format images work well for profiles, tall content, or vertical compositions."
+				/>
+			</div>
+
+			<h3>Features</h3>
+			<ul>
+				<li>Semantic HTML5 &lt;figure&gt; and &lt;figcaption&gt; elements</li>
+				<li>Responsive image sizing</li>
+				<li>Proper alt text for accessibility</li>
+				<li>Clean caption styling</li>
+				<li>Works with any image format or size</li>
+			</ul>
+
+			<h3>Usage Example</h3>
+			<pre><code>&lt;FigureComponent
+  src="path/to/your/image.jpg"
+  alt="Descriptive alt text"
+  caption="Your image caption here"
+/&gt;</code></pre>
+
+			<h3>Accessibility</h3>
+			<p>The Figure component follows web accessibility best practices by using semantic HTML elements and ensuring all images have meaningful alt text. The figcaption element provides additional context that screen readers can access.</p>
+		</section>
+	</div>
+</Layout>

@@ -1,0 +1,46 @@
+@use "../variables" as *;
+
+.accordion {
+        margin: .5rem 0;
+        overflow: hidden;
+
+    &__header {
+        background-color: $color-gray;
+        padding: 1rem;
+        cursor: pointer;
+        transition: $transition;
+        border: 1px solid $color-gray-dark;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+			&:after {
+				content: "+";
+				margin-left: 1rem;
+			}
+
+		&.active {
+			&:after {
+				content: "–";
+			}
+		}
+    }
+
+    &__content {
+        max-height: 0;
+        overflow: hidden;
+		border: 1px solid $color-gray-dark;
+		border-top: none;
+		padding: 0rem;
+		display: none;
+		transition: max-height $transition, border $transition, display $transition, padding 1s ease-in-out 200ms;
+		transition-behavior: allow-discrete;
+		
+        &.show {
+			display: block;
+			max-height: $bp-xlarge;
+			border-top: none;
+			padding: 1rem;
+        }
+    }
+}

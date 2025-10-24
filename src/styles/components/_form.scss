@@ -1,0 +1,22 @@
+@use '../variables' as *;
+
+input {
+    text-align: left;
+    min-width: 300px;
+    background: $color-white;
+    margin: 0px 0px 20px 0px;
+    padding: 5px;
+}
+
+select {
+    display: inline-block;
+    border: 1px solid $color-primary;
+    padding: 5px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+// Google translate overrides
+.goog-te-gadget .goog-te-combo {
+    margin: 10px 0 !important;
+}

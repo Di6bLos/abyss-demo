@@ -1,0 +1,151 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ImageHotspotComponent from "../../components/ImageHotspot.astro";
+---
+
+<Layout title="Image Hotspot">
+	<div class="container">
+		<section class="section">
+			<p>The Image Hotspot component allows you to add interactive points to images that reveal additional information when hovered or clicked. Perfect for product details, interactive maps, architectural plans, or any image that needs contextual information.</p>
+			
+			<h2>Demo</h2>
+			<div class="component-demo">
+				<h3>Interactive Product Image</h3>
+				<ImageHotspotComponent
+					src="https://placehold.co/800x600/6366f1/ffffff?text=Interactive+Product"
+					alt="Interactive product demonstration"
+					width={800}
+					height={600}
+					hotspots={[
+						{
+							id: "feature-1",
+							x: 25,
+							y: 30,
+							title: "Premium Materials",
+							description: "High-quality materials sourced from sustainable suppliers. <a href='#materials'>Learn more about our materials</a>",
+							icon: "✨"
+						},
+						{
+							id: "feature-2", 
+							x: 70,
+							y: 45,
+							title: "Advanced Technology",
+							description: "State-of-the-art technology integrated for optimal performance and user experience.",
+							icon: "⚡"
+						},
+						{
+							id: "feature-3",
+							x: 50,
+							y: 70,
+							title: "Ergonomic Design",
+							description: "Carefully crafted design that prioritizes user comfort and functionality.",
+							icon: "🎯"
+						},
+						{
+							id: "feature-4",
+							x: 85,
+							y: 25,
+							title: "Warranty",
+							description: "Comprehensive 2-year warranty covering all components and manufacturing defects.",
+							icon: "🛡️"
+						}
+					]}
+				/>
+
+				<h3>Interactive Workspace Layout</h3>
+				<ImageHotspotComponent
+					src="https://placehold.co/800x500/10b981/ffffff?text=Office+Layout"
+					alt="Interactive office layout"
+					width={800}
+					height={500}
+					hotspots={[
+						{
+							id: "workspace-1",
+							x: 20,
+							y: 40,
+							title: "Collaboration Zone",
+							description: "Open space designed for team meetings and collaborative work sessions.",
+							icon: "👥"
+						},
+						{
+							id: "workspace-2",
+							x: 60,
+							y: 30,
+							title: "Quiet Work Area",
+							description: "Dedicated space for focused individual work with noise reduction features.",
+							icon: "🤫"
+						},
+						{
+							id: "workspace-3",
+							x: 80,
+							y: 60,
+							title: "Break Room",
+							description: "Relaxation area with kitchen facilities and comfortable seating.",
+							icon: "☕"
+						}
+					]}
+				/>
+			</div>
+
+			<h3>Features</h3>
+			<ul>
+				<li>Interactive hotspot markers on images</li>
+				<li>Customizable position using percentage coordinates</li>
+				<li>Rich content support including HTML and links</li>
+				<li>Custom icons for visual differentiation</li>
+				<li>Responsive design that scales with image</li>
+				<li>Hover and click interactions</li>
+				<li>Accessible markup with proper ARIA labels</li>
+				<li>Smooth animations and transitions</li>
+			</ul>
+
+			<h3>Usage Example</h3>
+			<pre><code>&lt;ImageHotspotComponent
+  src="path/to/your/image.jpg"
+  alt="Image description"
+  width={800}
+  height={600}
+  hotspots={[
+    {
+      id: "hotspot-1",
+      x: 50,
+      y: 30,
+      title: "Hotspot Title",
+      description: "Detailed description with &lt;a href='#'&gt;links&lt;/a&gt;",
+      icon: "🔥"
+    }
+  ]}
+/&gt;</code></pre>
+
+			<h3>Hotspot Data Structure</h3>
+			<p>Each hotspot should have the following structure:</p>
+			<ul>
+				<li><strong>id</strong>: Unique identifier for the hotspot</li>
+				<li><strong>x</strong>: Horizontal position as percentage (0-100)</li>
+				<li><strong>y</strong>: Vertical position as percentage (0-100)</li>
+				<li><strong>title</strong>: Main heading for the hotspot</li>
+				<li><strong>description</strong>: Detailed content (supports HTML)</li>
+				<li><strong>icon</strong>: Optional emoji or icon class</li>
+				<li><strong>link</strong>: Optional direct link URL</li>
+			</ul>
+
+			<h3>Use Cases</h3>
+			<ul>
+				<li>Product feature explanations</li>
+				<li>Interactive maps and floor plans</li>
+				<li>Architectural drawings with annotations</li>
+				<li>Equipment diagrams and manuals</li>
+				<li>Educational infographics</li>
+				<li>Tour guides and location markers</li>
+			</ul>
+
+			<h3>Positioning</h3>
+			<p>Hotspots are positioned using percentage coordinates:</p>
+			<ul>
+				<li><strong>x: 0</strong> = Left edge, <strong>x: 100</strong> = Right edge</li>
+				<li><strong>y: 0</strong> = Top edge, <strong>y: 100</strong> = Bottom edge</li>
+				<li><strong>x: 50, y: 50</strong> = Center of the image</li>
+			</ul>
+		</section>
+	</div>
+</Layout>

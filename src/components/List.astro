@@ -1,0 +1,15 @@
+---
+interface Props {
+	items: String[];
+	ordered?: boolean;  // Optional prop to determine if the list is ordered or unordered
+}
+
+const { items, ordered = false } = Astro.props;
+const ListTag = ordered ? "ol" : "ul";
+---
+
+<ListTag>
+	{items.map(item => (
+		<li>{item}</li>
+	))}
+</ListTag>

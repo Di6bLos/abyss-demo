@@ -1,0 +1,18 @@
+@use '../variables' as *;
+
+// This sheet is intended ONLY for setting the baseline the img tag and custom classes related to img tags.
+
+img {
+    object-fit: cover;
+}
+
+figure {
+    margin-bottom: 1rem;
+}
+
+figcaption,
+.figcaption {
+    font-size: 0.9em;
+    font-style: italic;
+    line-height: 1em;
+}

@@ -1,0 +1,46 @@
+@use '../variables' as *;
+
+header {
+    padding: 30px 0px 20px 0px; 
+}
+
+.logo {
+    border: none;
+
+    &:hover {
+        border: none;
+    }
+    
+    img {
+        max-width: 100px;
+    }
+}
+
+.sticky-top {
+    background: $color-white;
+    z-index: 9;
+}
+ 
+// Header for each independent section.
+.entry-header {
+    background-color: $color-primary;
+    color: $color-white;
+    width: 100%;
+    padding: 25px 0px;
+    margin: 40px 0px;
+
+    h2 {
+        font-weight: 900;
+        margin: auto;
+    }
+}
+
+.section {
+    scroll-margin-top: 4rem;
+}
+
+.translations {
+    @media (min-width: $bp-small) {
+        text-align: right;
+    }
+}

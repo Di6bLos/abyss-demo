@@ -1,0 +1,64 @@
+@use '../variables' as *;
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 3px;
+    
+    &::after {
+        content: 'i';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -2px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 2px solid black;
+        font-size: 13px;
+    }
+
+    &__btn {
+        font-style: italic;
+        padding: 0 20px 0 0; 
+        position: relative;
+        margin: inherit;
+    
+        &::after {
+            position: absolute;
+            content: attr(data-tooltip);
+            background-color: $color-primary;
+            color: $color-white;
+            text-align: center;
+            border-radius: 5px;
+            width: max-content;
+            max-width: 320px;
+            padding: .5rem;
+            z-index: 1;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 10px 8px 0 8px;
+            border-style: solid;
+            border-color: $color-primary $color-transparent $color-transparent $color-transparent;
+        }
+
+        &.close {
+            &::after,
+            &::before {
+                visibility: hidden;
+            }
+        }
+    }
+}

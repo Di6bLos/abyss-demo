@@ -1,0 +1,26 @@
+---
+const demoImage = "https://placehold.co/600x400?text=Add+Image+Source";
+
+interface Props {
+	src?: string;
+    alt?: string;
+    caption?: string;
+}
+
+const { src = demoImage, alt = "", caption } = Astro.props; 
+---
+
+<figure>
+
+    <img 
+        width="auto" 
+        height="auto" 
+        src={src} 
+        alt={alt} 
+        loading="lazy" 
+    />
+
+    {/* Conditional render caption if provided */}
+    {caption && <figcaption>{caption}</figcaption>}
+
+</figure>

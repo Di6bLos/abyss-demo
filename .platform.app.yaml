@@ -1,0 +1,38 @@
+# The name of this app. Must be unique within a project.
+name: app
+
+# The runtime the application uses.
+type: 'nodejs:22'
+
+# The size of the persistent disk of the application (in MB).
+disk: 512
+
+# The build-time dependencies of the app.
+dependencies:
+  nodejs:
+    npm: "*"
+
+# The build command and deployment configuration.
+build:
+  flavor: none
+
+# The commands run to build the application.
+hooks:
+  build: |
+    npm install
+    npm run build
+
+# The configuration of the app when it's exposed to the web.
+web:
+  locations:
+    "/":
+      root: "dist"
+      index: ["index.html"]
+      allow: true
+      headers:
+        # Cache static assets for 1 year
+        'Cache-Control': 'public, max-age=31536000'
+      expires: 1y
+
+# No mounts needed for a static site
+mounts: {}

@@ -1,0 +1,21 @@
+@use '../variables' as *;
+
+.btn {
+	width: fit-content;
+	padding: .5em 1em;
+	border: 2px solid transparent;
+	border-radius: .25em;
+	font-size: inherit;
+	font-weight: 700;
+	cursor: pointer;
+
+	@include button-styles($color-white, $color-primary, $color-primary); /* $text-color, $background-color, $border-color */
+
+	&.btn-secondary {
+		@include button-styles($color-white, $color-secondary, $color-secondary); /* $text-color, $background-color, $border-color */
+	}
+	
+	&.btn-tertiary {
+		@include button-styles($color-white, $color-tertiary, $color-tertiary); /* $text-color, $background-color, $border-color */
+	}
+}

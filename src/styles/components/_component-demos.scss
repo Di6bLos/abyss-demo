@@ -1,0 +1,51 @@
+.component-demo {
+    margin: 2rem 0;
+    padding: 2rem;
+    background-color: var(--bg-color-light, #f8f9fa);
+    border-radius: 8px;
+    border: 1px solid var(--border-color, #e9ecef);
+
+    h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: var(--text-color-primary, #212529);
+        
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Code blocks styling
+pre {
+    background-color: var(--bg-color-dark, #f1f3f4);
+    border: 1px solid var(--border-color, #e9ecef);
+    border-radius: 4px;
+    padding: 1rem;
+    overflow-x: auto;
+    margin: 1rem 0;
+
+    code {
+        background: none;
+        padding: 0;
+        border: none;
+        font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        font-size: 0.875rem;
+        color: var(--text-color-primary, #212529);
+    }
+}
+
+// Inline code styling
+code {
+    background-color: var(--bg-color-light, #f8f9fa);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.875rem;
+    color: var(--text-color-secondary, #6c757d);
+}
+

@@ -1,0 +1,73 @@
+---
+export interface Props {
+  slides: {
+    src: string;
+    alt: string;
+    caption?: string;
+    width?: number;
+    height?: number;
+  }[];
+  className?: string;
+  showNavigation?: boolean;
+  showPagination?: boolean;
+  centeredSlides?: boolean;
+  showCaptions?: boolean;
+}
+
+const {
+  slides = [
+    { src: "https://placehold.co/600x400", alt: "Slide 1" },
+    { src: "https://placehold.co/600x400", alt: "Slide 2" },
+    { src: "https://placehold.co/600x400", alt: "Slide 3" }
+  ],
+  className = "mySwiper",
+  showNavigation = true,
+  showPagination = true,
+  centeredSlides = true
+} = Astro.props;
+---
+
+<div class={`swiper ${className}`}>
+	<div class="swiper-wrapper">
+	    {slides.map((slide, index) => (
+			<div class={`swiper-slide ${index === 0 && centeredSlides ? 'center' : ''}`}>
+				<div class="swiper-slide__image">
+					<img
+						width={slide.width || "auto"}
+						height={slide.height || "auto"}
+						src={slide.src}
+						alt={slide.alt}
+						loading="lazy"
+					/>
+				</div>
+
+				{slide.caption && (
+					<div class="swiper-slide__caption">
+						<p class="figcaption">{slide.caption}</p>
+					</div>
+				)}
+			</div>
+		))}
+	</div> <!-- .swiper-wrapper -->
+
+	{showNavigation && (
+		<>
+			<button class="swiper-button-prev">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+					<path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/>
+				</svg>
+			</button>
+			
+			<button class="swiper-button-next">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+					<path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+				</svg>
+			</button>
+		</>
+	)}
+	
+	{showPagination && <div class="swiper-pagination"></div>}
+
+</div> <!-- .swiper -->
+
+<script type="module" src="../src/scripts/swiper.js"></script>

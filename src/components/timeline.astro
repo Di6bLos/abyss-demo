@@ -1,0 +1,50 @@
+---
+interface TimelineDetail {
+    header: string;
+    details: string[];
+    subHeader: string;
+    active?: boolean;
+}
+
+interface Props {
+    title?: string;
+    milestones: TimelineDetail[];
+}
+
+const {
+    milestones = [],
+    title = "Project Timeline"
+} = Astro.props;
+---
+
+<div class="timeline-container">
+
+    <div class="inner-container">
+
+        <h3 class="title">{title}</h3>
+
+        <ul class="timeline">
+
+            {milestones.map((milestone) => (
+                <li class={`timeline-item${milestone.active ? " active" : ""}`}>
+
+                    <h4 class="header h3">{milestone.header}</h4>
+                    <div class="timeline-details">
+
+                        <span class="subheader">{milestone.subHeader}</span>
+                        <ul class="details-list">
+                            {milestone.details.map((detail) => (
+                                <li>{detail}</li>
+                            ))}
+                        </ul>
+                        
+                    </div>
+
+                </li>
+            ))}
+
+        </ul> <!-- .timeline -->
+
+    </div> <!-- .inner-container -->
+
+</div> <!-- .timeline-container -->

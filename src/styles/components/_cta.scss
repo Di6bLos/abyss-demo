@@ -1,0 +1,13 @@
+@use '../variables' as *;
+
+.cta {
+    background-color: $color-secondary;
+    color: $color-primary;
+    padding: 3rem;
+    text-align: center;
+
+    p {
+        font-size: 2rem;
+        color: $color-white;
+    }
+}
