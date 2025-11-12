@@ -1,79 +1,48 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Accordion from "../components/Accordion.astro";
-import Figure from "../components/Figure.astro";
-import List from "../components/List.astro";
+import ImageComparisonSlider from "../components/ImageComparisonSlider.astro";
 import ImageZoom from "../components/ImageZoom.astro";
 ---
 
 <Layout title="Abyss - The Drowned One">
 
-	<div class="container">
+	<section class="container">
 
-		<section class="lore-section">
-			<div class="story-section">
-				<h2>⚓ Before the Depths</h2>
-				
-				<ImageZoom
-					src="../src/assets/sebastian-cortez-portrait-cropped.jpg"
-					alt="Abyss emerging from the water, pale and glowing"
-					largeImage="../src/assets/sebastian-cortez-portrait.jpg"
-				></ImageZoom>
+		<article>
+			<ImageZoom
+				src="../src/assets/sebastian-cortez-portrait-cropped.jpg"
+				alt="Abyss emerging from the water, pale and glowing"
+				largeImage="../src/assets/sebastian-cortez-portrait.jpg"
+			></ImageZoom>
 
-				<p>Captain Sebastián Cortez was a man who believed the sea owed him everything. Born in Cádiz to a shipwright's family, he learned the language of tides before he learned to write his own name. By thirty, he commanded his own vessel — the <em>Peregrine</em> — and carved his legend across the Shattered Sea.</p>
-				
-				<p>Cortez was a pirate of precision, not chaos. He studied the ocean like scripture, charting hidden currents and unclaimed routes that made him both feared and envied. To him, the sea was not a mystery — it was a challenge. Something to master.</p>
-				
-				<p>When whispers spread of a region beyond the edge of any map — a vast, windless expanse known only as the Maw — Cortez saw it not as danger, but destiny. He believed that whatever lay at the center of the world's waters would grant him dominion over them.</p>
-			</div>
+			<p>Captain Sebastián Cortez was a man who believed the sea owed him everything. Born in Cádiz to a shipwright's family, he learned the language of tides before he learned to write his own name. By thirty, he commanded his own vessel — the <em>Peregrine</em> — and carved his legend across the Shattered Sea.</p>
+			<p>Cortez was a pirate of precision, not chaos. He studied the ocean like scripture, charting hidden currents and unclaimed routes that made him both feared and envied. To him, the sea was not a mystery — it was a challenge. Something to master.</p>
+			<p>When whispers spread of a region beyond the edge of any map — a vast, windless expanse known only as the Maw — Cortez saw it not as danger, but destiny. He believed that whatever lay at the center of the world's waters would grant him dominion over them.</p>
+		</article>
 
-			<div class="story-section">
-				<h2>🌊 The Fall</h2>
-				<!-- Add image: Storm at sea, crew in distress -->
-				<p>The voyage into the Maw lasted forty-one days. The stars vanished. The compasses spun. The water grew still. By the forty-second, half the crew had gone mad — hearing voices in the tide, seeing shapes beneath the hull. The Peregrine's decks wept saltwater, and Cortez's pride turned to fear.</p>
-				
-				<p>When the storm came, it rose not from the sky but from below. His crew mutinied, blaming him for their doom, and cast him overboard in chains. As he sank, Cortez felt his lungs burn, his heart pound — and then something vast pressed against his mind.</p>
-				
-				<p><strong>It didn't speak. It breathed through him.</strong></p>
-			</div>
+		<article>
+			<h2>The Fall</h2>
 
-			<div class="story-section">
-				<h2>⚡ The Rebirth</h2>
-				<!-- Add image: Abyss emerging from the water, pale and glowing -->
-				<p>Days later, the <em>Peregrine</em> was found adrift — crewless, its timbers groaning like a living thing. At its helm stood a figure pale as moonlight, water dripping endlessly from his coat. His eyes glowed faint blue, his voice low and steady as the tide.</p>
-				
-				<p>He no longer answered to Sebastián Cortez. He was the ocean's will given flesh — the herald of the deep. He was <strong>Abyss</strong>.</p>
+			<p>The voyage into the Maw lasted forty-one days. The stars vanished. The compasses spun. The water grew still. By the forty-second, half the crew had gone mad — hearing voices in the tide, seeing shapes beneath the hull. The Peregrine's decks wept saltwater, and Cortez's pride turned to fear.</p>
+			<p>When the storm came, it rose not from the sky but from below. His crew mutinied, blaming him for their doom, and cast him overboard in chains. As he sank, Cortez felt his lungs burn, his heart pound — and then something vast pressed against his mind.</p>
+			<p><strong>It didn't speak. It breathed through him.</strong></p>
+		</article>
 
-				
-			</div>
+		<article>
+			<h2>The Rebirth</h2>
 
-			<div class="story-section">
-				<h2>🚢 The Gravewake</h2>
-				<!-- Add image: The cursed ship with ghostly crew -->
-				<p>Once known as the <em>Peregrine</em>, the ship was reborn alongside its captain. Its sails drip with endless water, its hull groans like a beast of burden, and ghostly silhouettes move upon its decks. The Gravewake sails without wind or current, appearing where storms brew or souls are claimed by the deep.</p>
-				
-				<p>Legends say it carries the lost — crewmen and sailors who died at sea — bound in endless servitude to the Abyss. The ship's lantern burns with drowned starlight, illuminating no path, only the next victim.</p>
-			</div>
+			<p>Days later, the <em>Peregrine</em> was found adrift — crewless, its timbers groaning like a living thing. At its helm stood a figure pale as moonlight, water dripping endlessly from his coat. His eyes glowed faint blue, his voice low and steady as the tide.</p>
+			<p>He no longer answered to Sebastián Cortez. He was the ocean's will given flesh — the herald of the deep. He was <strong>Abyss</strong>.</p>
+			<p>Sailors say the Gravewake moves with no wind, drawn only by hunger. They say her captain no longer breathes, and that when his ship appears on the horizon, the sea grows perfectly still — as though waiting to see which souls will join it below.</p>
 
-			<div class="story-section">
-				<h2>⚔️ Tidebreaker</h2>
-				<!-- Add image: The mystical sword with blue glow -->
-				<p>Tidebreaker, once a gilded cutlass of Cortez's pride, now hums with the power of the deep. Its blade is forged from drowned steel, half-solid, half-liquid, rippling with a faint blue glow. When swung, it carries the force of the tide — striking like a crashing wave.</p>
-				
-				<p>Each strike of Tidebreaker pulls the moisture from the air, the sea, even its foes. When it meets another blade, the sound is not of metal, but of distant thunder. Only Abyss can wield it, for in mortal hands it turns to water and slips away.</p>
-				
-				<p><strong>It is said that when Tidebreaker meets its mark, the victim does not bleed — they drown.</strong></p>
-			</div>
-		</section>
-
-		<section class="current-legend">
-			<h2>🌊 The Current Legend</h2>
-			<div class="quote-section">
-				<blockquote>
-					<p>Sailors say the Gravewake moves with no wind, drawn only by hunger. They say her captain no longer breathes, and that when his ship appears on the horizon, the sea grows perfectly still — as though waiting to see which souls will join it below.</p>
-				</blockquote>
-			</div>
-		</section>
-	</div>
+			<ImageComparisonSlider
+				beforeSrc="../src/assets/sebastian-cortez-portrait-cropped.jpg"
+				afterSrc="../src/assets/abyss-portrait-cropped.jpg"
+				beforeAlt="Portrait of Sebastián Cortez"
+				afterAlt="Portrait of Abyss"
+			/>
+		</article>
+		
+	</section>
 
 </Layout>

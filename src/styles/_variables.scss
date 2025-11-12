@@ -1,6 +1,7 @@
 @use 'sass:math';
 
 // Colors
+$color-rich-black:        #13212Aff;
 $color-midnight-green:    #155065ff;
 $color-caribbean-current: #1B5C57ff;
 $color-turquoise:         #64E5D1ff;
@@ -23,7 +24,8 @@ $color-gray-dark:     #5A5A5A;
 $color-charcoal:      #333333;
 
 // Typography
-$font-family-primary:   'Roboto', sans-serif;
+$font-family-italianno: 'Italianno', cursive;
+$font-family-primary:   'Montserrat', sans-serif;
 $font-family-secondary: 'Montserrat', sans-serif;
 
 // Convert pixel values to rem.

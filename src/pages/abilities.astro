@@ -1,123 +1,100 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import List from '../components/List.astro';
-import Accordion from '../components/Accordion.astro';
+import Swiper from '../components/Swiper.astro';
 ---
 
-<Layout title="Abyss - Powers & Abilities">
+<Layout title="Powers & Abilities">
 
-	<div class="container">
-		<header class="hero-section">
-			<h1>🌊 Powers of the Abyss</h1>
-			<p class="lead">The supernatural abilities granted by the depths and the ocean's will.</p>
-		</header>
+	<section class="container">
 
-		<section class="abilities-grid">
-			<div class="ability-card">
-				<h2>🌊 Water Manipulation</h2>
-				<p>Wields the sea as both weapon and shield. He can whip waves into blades, shape whirlpools beneath enemy ships, or pull moisture from the air to form mist and illusions.</p>
-				<div class="ability-details">
-					<h3>Combat Applications:</h3>
-					<List items={[
-						"Whip waves into razor-sharp blades",
-						"Create devastating whirlpools beneath enemy vessels", 
-						"Pull moisture from air to form concealing mist",
-						"Shape water into protective barriers",
-						"Generate illusions using water vapor"
-					]} />
-					<p class="power-note"><strong>When enraged:</strong> His control expands into the very tide — entire harbors rise and fall to his command.</p>
-				</div>
-			</div>
-
-			<div class="ability-card">
-				<h2>👹 Abyssal Summon</h2>
-				<p>Calls forth creatures from the deepest trenches of the ocean, beings that exist between life and death in the crushing darkness below.</p>
-				<div class="ability-details">
-					<h3>Summoned Entities:</h3>
-					<List items={[
-						"Translucent leviathans from the deep trenches",
-						"Skeletal mariners - the souls of drowned sailors",
-						"The Kraken - ancient terror of the depths",
-						"Schools of spectral sea creatures",
-						"Ghostly remnants of sunken ships and their crews"
-					]} />
-					<p class="power-note"><strong>Note:</strong> These beings serve only as long as they remain connected to water.</p>
-				</div>
-			</div>
-
-			<div class="ability-card">
-				<h2>♻️ Rebirth of the Tide</h2>
-				<p>The ultimate gift of the ocean - true immortality bound to the endless cycle of tides and waves.</p>
-				<div class="ability-details">
-					<h3>Regenerative Powers:</h3>
-					<List items={[
-						"Mortal wounds heal through ocean's power",
-						"Can regenerate lost limbs using seawater",
-						"Immunity to drowning and water-based attacks",
-						"Resistance to conventional weapons",
-						"Body reforms from water when destroyed"
-					]} />
-					<p class="power-note"><strong>Immortal Covenant:</strong> He cannot die so long as the sea endures.</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="legendary-equipment">
-			<Accordion header="⚔️ Tidebreaker - The Drowned Blade">
-				<div class="weapon-lore">
-					<p>Tidebreaker, once a gilded cutlass of Cortez's pride, now hums with the power of the deep. Its blade is forged from drowned steel, half-solid, half-liquid, rippling with a faint blue glow.</p>
-					
-					<h3>🗡️ Weapon Properties:</h3>
-					<List items={[
-						"Forged from drowned steel - neither fully solid nor liquid",
-						"Strikes with the force of crashing waves",
-						"Pulls moisture from air, sea, and living beings",
-						"Sound of distant thunder when striking metal",
-						"Only Abyss can wield it - turns to water in mortal hands"
-					]} />
-					
-					<div class="legendary-effect">
-						<h4>💀 The Drowning Strike</h4>
-						<p><em>"When Tidebreaker meets its mark, the victim does not bleed — they drown."</em></p>
-						<p>Each successful strike doesn't just wound - it floods the victim's lungs with phantom seawater, causing them to experience drowning even on dry land.</p>
-					</div>
-				</div>
-			</Accordion>
-
-			<Accordion header="🚢 The Gravewake - Cursed Vessel">
-				<div class="ship-lore">
-					<p>Once the proud <em>Peregrine</em>, now reborn as an extension of Abyss's will. The ship itself has become a supernatural entity.</p>
-					
-					<h3>⚓ Vessel Abilities:</h3>
-					<List items={[
-						"Sails without wind or current, drawn by supernatural force",
-						"Hull groans like a living creature",
-						"Appears where storms brew or souls are claimed",
-						"Carries ghostly crew of drowned sailors",
-						"Lantern burns with drowned starlight"
-					]} />
-					
-					<div class="ship-curse">
-						<h4>👻 The Lost Crew</h4>
-						<p>The Gravewake is crewed by the souls of those who died at sea, bound in endless servitude to Abyss. They appear as ghostly silhouettes moving upon the decks, forever working the rigging of their cursed vessel.</p>
-					</div>
-				</div>
-			</Accordion>
-		</section>
-
-		<section class="power-limitations">
-			<h2>⚖️ Limitations & Weaknesses</h2>
-			<div class="limitations-content">
-				<p>Even the herald of the deep is not without bounds...</p>
+		<article>
+			<h2>Water Manipulation</h2>
+			<p>Wields the sea as both weapon and shield. He can whip waves into blades, shape whirlpools beneath enemy ships, or pull moisture from the air to form mist and illusions.</p>
+			<div class="ability-details">
+				<h3>Combat Applications:</h3>
 				<List items={[
-					"Powers diminish significantly when far from large bodies of water",
-					"Extreme heat can weaken water-based abilities",
-					"Sacred or blessed weapons may cause true harm",
-					"Cannot cross running fresh water without losing power temporarily",
-					"Bound to the ocean's will - not entirely his own master"
+					"Whip waves into razor-sharp blades",
+					"Create devastating whirlpools beneath enemy vessels", 
+					"Pull moisture from air to form concealing mist",
+					"Shape water into protective barriers",
+					"Generate illusions using water vapor"
 				]} />
+				<p><strong>When enraged:</strong> His control expands into the very tide — entire harbors rise and fall to his command.</p>
 			</div>
-		</section>
-	</div>
+
+			<Swiper 
+				slides={
+					[
+						{
+							src: '../src/assets/ability-water-blades.jpg',
+							alt: 'Abyss forming a blade of water from the sea',
+							caption: 'Water Blade'
+						},
+						{
+							src: '../src/assets/ability-water-kick.jpg',
+							alt: 'Abyss forming a water whip as he kicks',
+							caption: 'Water Whip'
+						},
+						{
+							src: '../src/assets/ability-water-tentacles.jpg',
+							alt: 'Abyss surrounded by water tentacles',
+							caption: 'Water Tentacles'
+						},
+						{
+							src: '../src/assets/ability-ice-spear.jpeg',
+							alt: 'Abyss creating an ice spear from water',
+							caption: 'Ice Spear'
+						}
+					]
+				}
+			/>
+
+		</article>
+
+		<article>
+			<h2>Abyssal Summon</h2>
+			<p>Calls forth creatures from the deepest trenches of the ocean, beings that exist between life and death in the crushing darkness below.</p>
+			<div class="ability-details">
+				<h3>Summoned Entities:</h3>
+				<List items={[
+					"Translucent leviathans from the deep trenches",
+					"Skeletal mariners - the souls of drowned sailors",
+					"The Kraken - ancient terror of the depths",
+					"Schools of spectral sea creatures",
+					"Ghostly remnants of sunken ships and their crews"
+				]} />
+				<p><strong>Note:</strong> These beings serve only as long as they remain connected to water.</p>
+			</div>
+		</article>
+
+		<article>
+			<h2>Rebirth of the Tide</h2>
+			<p>The ultimate gift of the ocean - true immortality bound to the endless cycle of tides and waves.</p>
+			<div class="ability-details">
+				<h3>Regenerative Powers:</h3>
+				<List items={[
+					"Mortal wounds heal through ocean's power",
+					"Can regenerate lost limbs using seawater",
+					"Immunity to drowning and water-based attacks",
+					"Resistance to conventional weapons",
+					"Body reforms from water when destroyed"
+				]} />
+				<p><strong>Immortal Covenant:</strong> He cannot die so long as the sea endures.</p>
+			</div>
+		</article>
+
+		<article>
+			<h2>Limitations & Weaknesses</h2>
+			<p>Even the herald of the deep is not without bounds...</p>
+			<List items={[
+				"Powers diminish when far from large bodies of water",
+				"Extreme heat can weaken water-based abilities",
+				"Sacred or magical weapons may cause serious harm",
+				"Bound to the ocean's will - not entirely his own master"
+			]} />
+		</article>
+
+	</section>
 
 </Layout>

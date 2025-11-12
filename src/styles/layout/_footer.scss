@@ -1,8 +1,9 @@
 @use '../variables' as *;
 
 footer {
-    padding: 2rem 0px;
+    padding: 3rem 0px;
     color: $color-white;
-    background-color: $color-primary;
+    background-color: $color-rich-black;
     text-align: center;
+    margin-top: 40px;
 } 

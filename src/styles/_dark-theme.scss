@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+body.dark-theme {
+	background-color: $color-rich-black;
+	color: $color-white;
+
+	.accordion {
+		border-color: $color-turquoise;
+
+		&.active .accordion__header {
+			border-bottom-color: $color-turquoise;
+		}
+		
+		&__title {
+			color: $color-turquoise;
+		}
+
+		&__button-icon span {
+			background: $color-turquoise;
+		}
+	}
+
+
+	footer {
+		border-top: 1px solid $color-turquoise;
+		
+	}
+}
