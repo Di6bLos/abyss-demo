@@ -14,22 +14,22 @@ const currentPage = Astro.url.pathname;
             <span class="navbar__toggle__icon"></span>
         </button>
 
-        <a class="logo" href="/">
+        <a class="logo" href="/abyss-demo/">
 					<img src="../src/assets/abyss-logo.png" alt="PROJECTUPDATE"/> <!-- PROJECTUPDATE src, alt-->
 				</a>
 
         <div class="navbar__nav">
             <ul class="navbar__nav-menu">
                 <li class="nav-item">
-                    <a class={currentPage === '/' ? 'current-page nav-link' : 'nav-link'} href="/">Lore</a>
+                    <a class={currentPage === '/abyss-demo/' ? 'current-page nav-link' : 'nav-link'} href="/abyss-demo/">Lore</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class={currentPage === '/abilities' ? 'current-page nav-link' : 'nav-link'} href="/abilities">Abilities</a>
+                    <a class={currentPage === '/abyss-demo/abilities/' ? 'current-page nav-link' : 'nav-link'} href="/abyss-demo/abilities">Abilities</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class={currentPage === '/equipment' ? 'current-page nav-link' : 'nav-link'} href="/equipment">Equipment</a>
+                    <a class={currentPage === '/abyss-demo/equipment/' ? 'current-page nav-link' : 'nav-link'} href="/abyss-demo/equipment">Equipment</a>
                 </li>
             </ul> <!-- .navbar__nav-menu -->
         </div>
