@@ -1,5 +1,4 @@
 ---
-import Header from "./Header.astro";
 import Navigation from "./Navigation.astro";
 import Footer from "./Footer.astro";
 import ImageZoomOverlay from "../components/ImageZoomOverlay.astro";
@@ -13,50 +12,31 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
 	<head>
-    <!-- Google Tag Manager -->
-    <script>{/*PROJECTUPDATE Google Tag Manager*/}</script>
-    <!-- End Google Tag Manager -->
 
     <!-- Standard Meta -->
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="PROJECTUPDATE"/><!-- PROJECTUPDATE meta content-->
+    <meta name="description" content="Abyss - The Drowned One. Explore the haunting tale of Captain Sebastián Cortez and his transformation into the herald of the deep."/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="canonical" href="https://PROJECTUPDATE.participate.online" /><!-- PROJECTUPDATE href -->
+    <link rel="canonical" href="https://abyss-demo.participate.online" />
 
-    <title>{title}</title><!-- PROJECTUPDATE title -->
+    <title>{title}</title>
 
     <!-- Icons/favicons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://placehold.co/1440x1080" /> <!-- PROJECTUPDATE href-->
-    <link rel="icon" type="image/png" sizes="32x32" href="https://placehold.co/1440x1080" /> <!-- PROJECTUPDATE favicon href-->
-
-    <!--Facebook/LinkedIn Open Graph -->
-    <meta property="og:title" content="PROJECTUPDATE" /> <!-- PROJECTUPDATE content -->
-    <meta property="og:url" content="https://PROJECTUPDATE.participate.online/" /> <!-- PROJECTUPDATE content url-->
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="PROJECTUPDATE" /> <!-- PROJECTUPDATE content -->
-    <meta property="og:image" content="https://placehold.co/1440x1080"/> <!-- PROJECTUPDATE content img url-->
-    <meta property="og:image:secure_url" content="https://placehold.co/1440x1080" />
-    <meta property="og:image:alt" content="PROJECTUPDATE" /> <!-- PROJECTUPDATE content -->
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-
-    <!--Twitter Open Graph -->
-    <meta name="twitter:title" content="PROJECTUPDATE" /> <!-- PROJECTUPDATE content -->
-    <meta name="twitter:description" content="PROJECTUPDATE" /> <!-- PROJECTUPDATE content -->
-    <meta name="twitter:url" content="https://PROJECTUPDATE.participate.online/" /> <!-- PROJECTUPDATE url -->
-    <meta name="twitter:image" content="https://placehold.co/1440x1080" /> <!-- PROJECTUPDATE content img url -->
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/abyss-logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/abyss-logo.png" />
     
     <!-- CDN CSS Fetch -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="all" />
 
 
 	</head>
-	<body>
-        <Header title={title}/>
+	<body class="dark-theme">
         <Navigation />
 		<main>
+            <div class="container">
+                <h1>{title}</h1>
+            </div>
 
             <slot />
 

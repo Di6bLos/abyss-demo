@@ -13,8 +13,8 @@ const {
     afterSrc = "https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940", 
     beforeAlt = "Before Image", 
     afterAlt = "After Image", 
-    beforeCaption = "Before Image", 
-    afterCaption = "After Image" 
+    beforeCaption, 
+    afterCaption 
 } = Astro.props;
 ---
 
@@ -22,18 +22,22 @@ const {
 
     <figure class="before-image">
         <img width="auto" height="auto" src={beforeSrc} alt={beforeAlt} loading="lazy"/>
-        <figcaption class="before-image__caption">
-            {beforeCaption}
-        </figcaption>
+        {beforeCaption && (
+            <figcaption class="before-image__caption">
+                {beforeCaption}
+            </figcaption>
+        )}
     </figure> <!-- .before-image -->
 
     <div class="resizer"></div>
 
     <figure class="after-image">
         <img width="auto" height="auto" src={afterSrc} alt={afterAlt} loading="lazy"/>
-        <figcaption class="after-image__caption">
-            {afterCaption}
-        </figcaption>
+        {afterCaption && (
+            <figcaption class="after-image__caption">
+                {afterCaption}
+            </figcaption>
+        )}
     </figure> <!-- .after-image -->
 
 </div> <!-- .before-after-slider -->

@@ -1,7 +1,9 @@
 // Baseline
+@use 'variables';
 @use 'reset';
 @use 'base';
-@use 'variables';
+@use 'dark-theme';
+@use 'fonts';
 
 // Layout
 @use 'layout/header';
@@ -26,4 +28,5 @@
 @use 'components/image-hotspot';
 @use 'components/list';
 @use 'components/component-demos';
+@use 'components/theme-toggle';
 @import 'swiper/css/bundle';

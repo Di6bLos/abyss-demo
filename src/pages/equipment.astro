@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Accordion from '../components/Accordion.astro';
+import List from '../components/List.astro';
+---
+
+<Layout title="Equipment">
+
+	<section class="container">
+
+		<article>
+			<h2>The Gravewake – Cursed Vessel</h2>
+
+			<p>Once known as the <em>Peregrine</em>, the ship was reborn alongside its captain. Its sails drip with endless water, its hull groans like a beast of burden, and ghostly silhouettes move upon its decks. The Gravewake sails without wind or current, appearing where storms brew or souls are claimed by the deep.</p>
+			<p>Legends say it carries the lost — crewmen and sailors who died at sea — bound in endless servitude to the Abyss. The ship's lantern burns with drowned starlight, illuminating no path, only the next victim.</p>
+
+			<Accordion header="Vessel Abilities">
+				<List items={[
+					"Sails without wind or current, drawn by supernatural force",
+					"Hull groans like a living creature",
+					"Appears where storms brew or souls are claimed",
+					"Carries ghostly crew of drowned sailors",
+					"Lantern burns with drowned starlight"
+				]} />
+				
+				<h4>The Lost Crew</h4>
+				<p>The Gravewake is crewed by the souls of those who died at sea, bound in endless servitude to Abyss. They appear as ghostly silhouettes moving upon the decks, forever working the rigging of their cursed vessel.</p>
+			</Accordion>
+		</article>
+
+		<article>
+			<h2>Tidebreaker – The Drowned Blade</h2>
+
+			<p>Tidebreaker, once a gilded cutlass of Cortez's pride, now hums with the power of the deep. Its blade is forged from drowned steel, half-solid, half-liquid, rippling with a faint blue glow. When swung, it carries the force of the tide — striking like a crashing wave.</p>
+			<p>Each strike of Tidebreaker pulls the moisture from the air, the sea, even its foes. When it meets another blade, the sound is not of metal, but of distant thunder. Only Abyss can wield it, for in mortal hands it turns to water and slips away.</p>
+			<p><strong>It is said that when Tidebreaker meets its mark, the victim does not bleed — they drown.</strong></p>
+
+			<Accordion header="Weapon Properties">
+				<List items={[
+					"Forged from drowned steel - neither fully solid nor liquid",
+					"Strikes with the force of crashing waves",
+					"Pulls moisture from air, sea, and living beings",
+					"Sound of distant thunder when striking metal",
+					"Only Abyss can wield it - turns to water in mortal hands"
+				]} />
+				
+				<h4>The Drowning Strike</h4>
+				<p><em>"When Tidebreaker meets its mark, the victim does not bleed — they drown."</em></p>
+				<p>Each successful strike doesn't just wound - it floods the victim's lungs with phantom seawater, causing them to experience drowning even on dry land.</p>
+			</Accordion>
+		</article>
+
+	</section>
+
+</Layout>

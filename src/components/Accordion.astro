@@ -10,25 +10,44 @@ const componentId = `accordion-content-${Date.now()}`;
 ---
 
 <div class="accordion"> 
+
 	<div class="accordion__header">
-		{header}
+            
+		<button 
+		class="accordion__button" 
+		aria-expanded="false" 
+		aria-controls={componentId} 
+		aria-label="Toggle Accordion Content"
+		> 
+			<h3 class="accordion__title">
+				{header}
+			</h3>
+
+			<div class="accordion__button-icon">
+				<span></span>
+				<span></span>
+			</div>
+		</button>
+		
 	</div>
+
 	<div class="accordion__content" id={componentId}>
-		<slot/>
+		<div class="accordion__content-inner">
+			<slot/>
+		</div>
 	</div>
+
 </div> <!-- .accordion -->
 
 
 <script>
-	const accordionList = document.querySelectorAll(".accordion");
+	const accordions = document.querySelectorAll('.accordion');
 
-	accordionList.forEach(accordion => {
-		let accordionHeader = accordion.querySelector(".accordion__header");
-		let accordionContent = accordion.querySelector(".accordion__content");
+	accordions.forEach((accordion) => {
+		const accBtn = accordion.querySelector('.accordion__button');
 
-		accordionHeader.addEventListener("click", () => {
-			accordionContent.classList.toggle("show");
-			accordionHeader.classList.toggle("active");
+		accBtn.addEventListener('click', function () {
+			accordion.classList.toggle('active');
 		});
 	});
 

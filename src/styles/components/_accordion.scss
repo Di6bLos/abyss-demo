@@ -1,46 +1,106 @@
 @use "../variables" as *;
 
 .accordion {
-        margin: .5rem 0;
-        overflow: hidden;
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    padding: 0;
+    margin-bottom: $spacing-small;
+    scroll-margin-top: 80px;
 
     &__header {
-        background-color: $color-gray;
-        padding: 1rem;
-        cursor: pointer;
-        transition: $transition;
-        border: 1px solid $color-gray-dark;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+        position: relative;
+        transition: border $transition; // Seamlessly adds border when active.
+        border-bottom: 0px solid $color-gray;
+        
+        .accordion__title {
+            color: $color-secondary;
+            text-align: left;
+            padding: 0;
+			margin: 0;
+        }
+        
+        button {
+            cursor: pointer;
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
 
-			&:after {
-				content: "+";
-				margin-left: 1rem;
-			}
+        // Create plus/minus icon.
+        .accordion__button-icon {
+            min-width: 40px;
+            min-height: 40px;
+            border: 0;
+            position: relative;
 
-		&.active {
-			&:after {
-				content: "–";
-			}
-		}
+            span {
+                position: absolute;
+                transition: $transition;
+                background: $color-secondary;
+                border-radius: 2px;
+            }
+        }
+        
+        button span {
+            &:first-child {
+                top: 25%;
+                bottom: 25%;
+                width: 10%;
+                left: 45%;
+            }
+
+            &:last-child {
+                left: 25%;
+                right: 25%;
+                height: 10%;
+                top: 45%;
+            }
+        }
+
+        &:hover {
+            .accordion__button-icon span {
+                background: $color-primary;
+            }
+        }
     }
 
+    // Animate plus to minus
+    &.active .accordion__header {
+        border-bottom: 1px solid $color-gray;
+
+        button span {
+            transform: rotate(90deg);
+
+            &:last-child {
+                left: 50%;
+                right: 50%;
+            }
+        }
+    }
+
+    // Animate content roll out.
     &__content {
-        max-height: 0;
-        overflow: hidden;
-		border: 1px solid $color-gray-dark;
-		border-top: none;
-		padding: 0rem;
-		display: none;
-		transition: max-height $transition, border $transition, display $transition, padding 1s ease-in-out 200ms;
-		transition-behavior: allow-discrete;
-		
-        &.show {
-			display: block;
-			max-height: $bp-xlarge;
-			border-top: none;
-			padding: 1rem;
+        padding: 0px 20px;
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: all $transition;
+
+        &-inner {
+            overflow: hidden;
+            position: relative;
+        }
+    }    
+
+    &.active {
+        .accordion__content {
+			padding-block: 20px;
+            grid-template-rows: 1fr;
         }
     }
 }
