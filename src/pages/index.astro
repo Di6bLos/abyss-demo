@@ -2,6 +2,8 @@
 import Layout from "../layouts/Layout.astro";
 import ImageComparisonSlider from "../components/ImageComparisonSlider.astro";
 import ImageZoom from "../components/ImageZoom.astro";
+
+const baseURL = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Abyss - The Drowned One">
@@ -10,7 +12,7 @@ import ImageZoom from "../components/ImageZoom.astro";
 
 		<article>
 			<ImageZoom
-				src="./src/assets/sebastian-cortez-portrait-cropped.jpg"
+				src=`${baseURL}/assets/sebastian-cortez-portrait-cropped.jpg`
 				alt="Abyss emerging from the water, pale and glowing"
 				largeImage="../src/assets/sebastian-cortez-portrait.jpg"
 			></ImageZoom>

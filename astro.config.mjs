@@ -2,8 +2,9 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://Di6bLos.github.io',
+	site: 'https://di6blos.github.io',
 	base: '/abyss-demo/',
+	output: 'static',
 	vite: {
 		server: {
 			fs: {
