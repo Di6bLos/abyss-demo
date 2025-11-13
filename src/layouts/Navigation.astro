@@ -1,5 +1,6 @@
 ---
 import ThemeToggle from '../components/ThemeToggle.astro';
+import abyssLogo from '../assets/abyss-logo.png';
 
 const currentPage = Astro.url.pathname;
 ---
@@ -15,7 +16,7 @@ const currentPage = Astro.url.pathname;
         </button>
 
         <a class="logo" href="/abyss-demo/">
-					<img src="../src/assets/abyss-logo.png" alt="PROJECTUPDATE"/> <!-- PROJECTUPDATE src, alt-->
+					<img src={abyssLogo.src} alt="PROJECTUPDATE"/> <!-- PROJECTUPDATE src, alt-->
 				</a>
 
         <div class="navbar__nav">

@@ -2,7 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import ImageComparisonSlider from "../components/ImageComparisonSlider.astro";
 import ImageZoom from "../components/ImageZoom.astro";
-import sbCortezPortrait from "../../src/assets/sebastian-cortez-portrait-cropped.jpg";
+import sbCortezPortraitCropped from "../assets/sebastian-cortez-portrait-cropped.jpg";
+import sbCortezPortraitLarge from "../assets/sebastian-cortez-portrait.jpg";
+import abyssPortraitCropped from "../assets/abyss-portrait-cropped.jpg";
 ---
 
 <Layout title="Abyss - The Drowned One">
@@ -11,9 +13,9 @@ import sbCortezPortrait from "../../src/assets/sebastian-cortez-portrait-cropped
 
 		<article>
 			<ImageZoom
-				src={sbCortezPortrait.src}
+				src={sbCortezPortraitCropped.src}
 				alt="Abyss emerging from the water, pale and glowing"
-				largeImage="../src/assets/sebastian-cortez-portrait.jpg"
+				largeImage={sbCortezPortraitLarge.src}
 			></ImageZoom>
 
 			<p>Captain Sebastián Cortez was a man who believed the sea owed him everything. Born in Cádiz to a shipwright's family, he learned the language of tides before he learned to write his own name. By thirty, he commanded his own vessel — the <em>Peregrine</em> — and carved his legend across the Shattered Sea.</p>
@@ -29,8 +31,8 @@ import sbCortezPortrait from "../../src/assets/sebastian-cortez-portrait-cropped
 			<p><strong>It didn't speak. It breathed through him.</strong></p>
 
 			<ImageComparisonSlider
-				beforeSrc="../src/assets/sebastian-cortez-portrait-cropped.jpg"
-				afterSrc="../src/assets/abyss-portrait-cropped.jpg"
+				beforeSrc={sbCortezPortraitCropped.src}
+				afterSrc={abyssPortraitCropped.src}
 				beforeAlt="Portrait of Sebastián Cortez"
 				afterAlt="Portrait of Abyss"
 			/>

@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import List from '../components/List.astro';
 import Swiper from '../components/Swiper.astro';
+import abilityWaterBlades from '../assets/ability-water-blades.jpg';
+import abilityWaterKick from '../assets/ability-water-kick.jpg';
+import abilityWaterTentacles from '../assets/ability-water-tentacles.jpg';
+import abilityIceSpear from '../assets/ability-ice-spear.jpeg';
 ---
 
 <Layout title="Powers & Abilities">
@@ -27,22 +31,22 @@ import Swiper from '../components/Swiper.astro';
 				slides={
 					[
 						{
-							src: '../src/assets/ability-water-blades.jpg',
+							src: abilityWaterBlades.src,
 							alt: 'Abyss forming a blade of water from the sea',
 							caption: 'Water Blade'
 						},
 						{
-							src: '../src/assets/ability-water-kick.jpg',
+							src: abilityWaterKick.src,
 							alt: 'Abyss forming a water whip as he kicks',
 							caption: 'Water Whip'
 						},
 						{
-							src: '../src/assets/ability-water-tentacles.jpg',
+							src: abilityWaterTentacles.src,
 							alt: 'Abyss surrounded by water tentacles',
 							caption: 'Water Tentacles'
 						},
 						{
-							src: '../src/assets/ability-ice-spear.jpeg',
+							src: abilityIceSpear.src,
 							alt: 'Abyss creating an ice spear from water',
 							caption: 'Ice Spear'
 						}
